@@ -69,7 +69,7 @@ if (argv._.length === 0 && !process.env.DISCORD_EMBEDS) {
     {
       headers: {
         'Content-Type': 'application/json',
-        'X-GitHub-Event': process.env.GITHUB_EVENT_NAME,
+        'X-GitHub-Event': process.env.CUSTOM_GITHUB_EVENT_NAME || process.env.GITHUB_EVENT_NAME,
       },
     },
   );
